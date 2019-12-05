@@ -82,7 +82,14 @@
                </table>
                <?php } ?> 
                <a href="index.php"><button class="button is-info">Home</button></a>
-               <?php echo '<a href="aula.php?matricula='.$matricula.'">'?><button class="button is-success">Alterar Aulas</button></a> 
+               
+               <?php 
+                if(isset($_GET['matricula'])){
+                    echo '<a href="aula.php?matricula='.$matricula.'">';
+                
+                ?><button class="button is-success">Alterar Aulas</button></a> <?php
+                }
+                ?>
             </div>
          </div>
       </section>
